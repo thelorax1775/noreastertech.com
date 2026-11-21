@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Nor'easter Tech</title>
+<meta name="description" content="Contact Nor'easter Tech by phone, email or the request form. Serving Sandwich, Bourne, Falmouth, Mashpee and Barnstable on Cape Cod.">
+<meta name="theme-color" content="#12344d">
+<link rel="canonical" href="https://noreastertech.com/contact.html">
+<meta property="og:title" content="Contact | Nor'easter Tech">
+<meta property="og:description" content="Contact Nor'easter Tech by phone, email or the request form. Serving Sandwich, Bourne, Falmouth, Mashpee and Barnstable on Cape Cod.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://noreastertech.com/contact.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap bar">
+<a class="brand" href="index.html"><img src="logo.svg" alt="Nor'easter Tech" width="220" height="43"></a>
+<p class="tagline">Weathering your tech storms.</p>
+<nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="home-watch.html">Home watch</a></li><li><a href="rook.html">Rook</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li><li><a href="book.html">Ebook</a></li></ul></nav>
+</div>
+</header>
+<main id="main" tabindex="-1">
+
+<section class="wrap">
+<h1>Contact</h1>
+<p class="lead">Call, email, or fill in the form. I reply the same or next evening.</p>
+<ul>
+<li>Phone: <a href="tel:{{PHONE}}">{{PHONE}}</a></li>
+<li>Email: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+<li>Hours: Weeknight evenings and weekends, by appointment</li>
+<li>Area: Sandwich, Bourne, Falmouth, Mashpee, Barnstable</li>
+</ul>
+<h2>How booking works</h2>
+<ol>
+<li>You send me a request, by the form, email or phone.</li>
+<li>I reply with a time and a price.</li>
+<li>I do the job.</li>
+<li>You pay when the job is done: cash, check or card. For second-home watch, the equipment is paid for before it is ordered, and monitoring is billed monthly.</li>
+</ol>
+<h2>Send a request</h2>
+<p>The form opens your email app with the message filled in. Nothing is sent until you press send there.</p>
+<noscript><p>Scripts are off, so the form will not work. Please email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> instead.</p></noscript>
+<form id="req" class="form">
+<label for="name">Your name</label>
+<input id="name" name="name" autocomplete="name" required>
+<label for="town">Town</label>
+<select id="town" name="town">
+<option>Sandwich</option><option>Bourne</option><option>Falmouth</option><option>Mashpee</option><option>Barnstable</option><option>Another Cape town (I will tell you if I can come)</option>
+</select>
+<label for="service">What do you need?</label>
+<select id="service" name="service">
+<option>Home visit</option><option>Wi-Fi fix or mesh install</option><option>New computer setup with files moved over</option><option>Small office network and backup check</option><option>Second-home watch setup</option><option>Second-home watch monitoring</option><option>Rook home network pilot</option><option>Remote help</option>
+<option>Not sure</option>
+</select>
+<label for="phone">Phone or best way to reach you</label>
+<input id="phone" name="phone" inputmode="tel" autocomplete="tel">
+<label for="msg">Tell me what is going on</label>
+<textarea id="msg" name="msg" rows="5"></textarea>
+<button class="btn" type="submit">Open email with my request</button>
+</form>
+<p class="small">Privacy: the form only opens an email in your own mail app. This site stores nothing and has no trackers. I use your message only to reply.</p>
+<script>
+document.getElementById("req").addEventListener("submit",function(e){
+e.preventDefault();var f=e.target,v=function(n){return f.elements[n].value};
+var body="Name: "+v("name")+"\nTown: "+v("town")+"\nService: "+v("service")+"\nContact: "+v("phone")+"\n\n"+v("msg");
+location.href="mailto:{{EMAIL}}?subject="+encodeURIComponent("Service request from "+v("name"))+"&body="+encodeURIComponent(body);
+});
+</script>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<p><strong>Nor'easter Tech</strong> &middot; Weathering your tech storms.</p>
+<p>Serving Sandwich, Bourne, Falmouth, Mashpee, Barnstable.</p>
+<p><a href="tel:{{PHONE}}">{{PHONE}}</a> &middot; <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+<p class="small">Weeknight evenings and weekends, by appointment. Prices are the same for every customer and are listed on the <a href="services.html">services page</a>.</p>
+</div>
+</footer>
+</body>
+</html>

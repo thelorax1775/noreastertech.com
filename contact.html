@@ -11,8 +11,14 @@
 <meta property="og:description" content="Contact Nor'easter Tech: call or text (774) 313-7952 or email noreastertech@gmail.com to book tech help or Rook network security on the Upper Cape.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://noreastertech.com/contact.html">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://noreastertech.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nor'easter Tech logo with the line Weathering your tech storms, on a dark blue background.">
+<meta property="og:site_name" content="Nor'easter Tech">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -40,10 +46,11 @@
 
 <section class="section">
 <div class="wrap">
+<h2 class="sr-only">Ways to reach us</h2>
 <div class="grid c4 contact-cards">
 <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></div><h3>Call</h3><a class="big" href="tel:+17743137952">(774) 313-7952</a></div>
 <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5Z"/></svg></div><h3>Text</h3><a class="big" href="sms:+17743137952">(774) 313-7952</a></div>
-<div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><h3>Email</h3><a class="big" href="mailto:noreastertech@gmail.com">noreastertech@gmail.com</a></div>
+<div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><h3>Email</h3><a class="big" href="mailto:noreastertech@gmail.com">noreastertech@<wbr>gmail.com</a></div>
 <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Hours</h3><p>Evenings and weekends, by appointment</p></div>
 </div>
 </div>
@@ -73,6 +80,7 @@
 <div class="field"><label for="msg">What's going on?</label><textarea id="msg" name="msg" required></textarea></div>
 <button class="btn" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Send request</button>
 <p class="form-note">Your request opens in your own email app. This site stores nothing and has no trackers.</p>
+<p class="form-note" id="req-status" role="status" aria-live="polite"></p>
 </form>
 </div>
 </section>
@@ -85,6 +93,7 @@
 <script>
 document.getElementById("req").addEventListener("submit",function(e){e.preventDefault();var f=e.target,v=function(n){return f.elements[n].value};
 var body="Name: "+v("name")+"\nContact: "+v("phone")+"\nTown: "+v("town")+"\nService: "+v("service")+"\n\n"+v("msg");
+document.getElementById("req-status").textContent="Your email app should open with your request ready to send. If nothing opens, call or text (774) 313-7952 or email noreastertech@gmail.com.";
 location.href="mailto:noreastertech@gmail.com?subject="+encodeURIComponent("Service request: "+v("service"))+"&body="+encodeURIComponent(body);});
 </script>
 </main>

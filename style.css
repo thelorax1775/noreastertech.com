@@ -229,7 +229,7 @@ a.card:hover .more::after { transform: translateX(3px); }
 
 /* Contact */
 .contact-cards .card { display: flex; flex-direction: column; }
-.contact-cards .big { font-size: 1.2rem; font-weight: 800; color: var(--ink); text-decoration: none; word-break: break-word; }
+.contact-cards .big { font-size: 1.2rem; font-weight: 800; color: var(--ink); text-decoration: none; overflow-wrap: break-word; }
 .contact-cards .big:hover { color: var(--teal-700); }
 form.request { display: grid; gap: 1.1rem; }
 .field { display: grid; gap: .4rem; }
@@ -278,3 +278,6 @@ form.request { display: grid; gap: 1.1rem; }
 .pill svg { width: 14px; height: 14px; }
 
 .hero .split h1 { font-size: clamp(2.4rem, 1.6rem + 3vw, 3.9rem); max-width: 14ch; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.site-footer li a { display: inline-block; padding: .35rem 0; }
